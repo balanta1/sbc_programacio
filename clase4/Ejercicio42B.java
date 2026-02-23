@@ -7,7 +7,7 @@ public class Ejercicio42B {
         System.out.println("Punto de ebullicion");
         int temperatura = sc.nextInt();
         // condicional
-        if (temperatura == 100) {
+        if (temperatura >= 100) {
             System.out.println("por encima del punto de ebullicion del agua");
         } else {
             System.out.println("por debajo del punto de ebullicion del agua");
