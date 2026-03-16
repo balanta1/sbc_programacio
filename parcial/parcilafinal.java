@@ -14,7 +14,15 @@ public class parcilafinal {
             System.out.println("Bienvenido automatico de la uniajc");
             System.out.println("Digite la cantidad a digiatar");
             retiro = sc.nextInt();
+           /*
+           codigo
+           */
+
+        }else{
+            System.out.println("clave incorrecta");
         }
+
+
         System.out.println("retiro");
         if (retiro>200000){
             retiro = retiro + 2000;}
