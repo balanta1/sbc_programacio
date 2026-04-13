@@ -4,7 +4,7 @@ public class F6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int opcionPrincipal = -1;
-        
+
         // Variables globales para el reporte del día
         double recaudoGlobal = 0;
         int totalPasajerosDia = 0;
@@ -55,5 +55,5 @@ public class F6 {
         }
         sc.close();
     }
-    
+
 }

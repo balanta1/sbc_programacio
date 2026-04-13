@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class F5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         int contGratis = 0;
         double valorSubsidioTotal = 0;
         double precioReferencia = 3000; // Lo que dejaría de ganar el MIO
@@ -31,5 +31,5 @@ public class F5 {
         System.out.println("Total pasajeros gratuitos: " + contGratis);
         System.out.println("Valor total subsidiado: $" + valorSubsidioTotal);
     }
-    
+
 }

@@ -14,7 +14,7 @@ public class F1 {
         double tarifaBase = 0;
         double decuento = 0;
         String nombreTipo = "";
-        
+
         // Regla: Hora valle entre las 9:00 y las 16:00
         boolean esHoraValle = (hora >= 9 && hora <= 16);
 
@@ -50,4 +50,3 @@ public class F1 {
         System.out.println("Total a pagar: $" + totalPagar);
     }
 }
-    

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class F4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         double recaudoTotal = 0;
         int totalPasajerosAtendidos = 0;
         int continuar = 1;
@@ -17,11 +17,13 @@ public class F4 {
             int tipo = sc.nextInt();
 
             double tarifa = 0;
-            if (tipo == 1) tarifa = 3000;
+            if (tipo == 1)
+                tarifa = 3000;
             else if (tipo == 2) {
                 tarifa = 1500;
-                if (hora >= 9 && hora <= 16) tarifa -= 150; // 10% dto
-            } 
+                if (hora >= 9 && hora <= 16)
+                    tarifa -= 150; // 10% dto
+            }
             // Casos 3 y 4 son tarifa 0
 
             recaudoTotal += tarifa;
@@ -36,5 +38,5 @@ public class F4 {
         System.out.println("Pasajeros atendidos: " + totalPasajerosAtendidos);
         System.out.println("Total recaudado: $" + recaudoTotal);
     }
-    
+
 }

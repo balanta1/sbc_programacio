@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class F2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         int capacidadMax = 80;
         int pasajerosActuales = 0;
         int totalSubieron = 0;
@@ -14,14 +14,16 @@ public class F2 {
             System.out.println("\nPARADA " + parada + " - Pasajeros a bordo: " + pasajerosActuales);
             System.out.print("¿Cuántos suben? (o -1 para terminar ruta): ");
             int suben = sc.nextInt();
-            
-            if (suben == -1) break;
+
+            if (suben == -1)
+                break;
 
             System.out.print("¿Cuántos bajan? ");
             int bajan = sc.nextInt();
 
             // Validación: No pueden bajar más de los que hay
-            if (bajan > pasajerosActuales) bajan = pasajerosActuales;
+            if (bajan > pasajerosActuales)
+                bajan = pasajerosActuales;
             pasajerosActuales -= bajan;
 
             // Validación: No superar capacidad máxima
@@ -33,14 +35,18 @@ public class F2 {
 
             pasajerosActuales += suben;
             totalSubieron += suben;
-            
-            if (pasajerosActuales == capacidadMax) paradasConAforoMax++;
+
+            if (pasajerosActuales == capacidadMax)
+                paradasConAforoMax++;
 
             // Mostrar estado según porcentaje
             double porcentaje = (pasajerosActuales * 100.0) / capacidadMax;
-            if (pasajerosActuales == capacidadMax) System.out.println("Estado: AFORO MÁXIMO");
-            else if (porcentaje >= 60) System.out.println("Estado: BUS LLENO");
-            else System.out.println("Estado: NORMAL");
+            if (pasajerosActuales == capacidadMax)
+                System.out.println("Estado: AFORO MÁXIMO");
+            else if (porcentaje >= 60)
+                System.out.println("Estado: BUS LLENO");
+            else
+                System.out.println("Estado: NORMAL");
 
             parada++;
         }
