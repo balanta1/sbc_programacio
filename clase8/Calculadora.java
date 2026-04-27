@@ -1,8 +1,8 @@
 public class Calculadora {
     public static void main(String[] args) {
        
-        int a = 3;
-        int b = 8;
+        int a = 100;
+        int b = 50;
  
         OperacionesMatematicas objCalc1 = new OperacionesMatematicas(a, b);
  
