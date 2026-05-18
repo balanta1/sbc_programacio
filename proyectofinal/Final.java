@@ -98,7 +98,7 @@ class Actividades {
         return partMaximo;
     }
 
-    public boolean isAltoImpacto() { // Mejor nombrado como isAltoImpacto
+    public boolean isAltoImpacto() { 
         return AltoImpacto;
     }
 
@@ -113,7 +113,7 @@ class Actividades {
 class Inscripciones {
     private Estudiante estudiante;
     private Actividades actividades;
-    // Eliminé el "id" de inscripción ya que no se usaba de manera práctica
+    
 
     public Inscripciones(Estudiante estudiante, Actividades actividades) {
         this.estudiante = estudiante;
@@ -153,11 +153,11 @@ class gestioncupos {
         }
         
         long cuposllenos = inscripcion.stream().filter(i -> i.getActividades() == actividades).count();
-        if (cuposllenos < actividades.getpartMaximo()) { // Corregido: getpartMaximo y actividades
+        if (cuposllenos < actividades.getpartMaximo()) { 
             inscripcion.add(new Inscripciones(estudiante, actividades));
             System.out.println("  Solicitud aceptada: Inscrito exitosamente.");
         } else {
-            listadeEspera.add(estudiante); // Corregido: estudiante
+            listadeEspera.add(estudiante); 
             System.out.println("  Atencion: cupos llenos. Se le agregará a Lista de Espera.");
         }
     }
@@ -184,7 +184,7 @@ class gestioncupos {
 
             if (!listadeEspera.isEmpty()) {
                 Estudiante siguiente = listadeEspera.remove(0);
-                inscripcion.add(new Inscripciones(siguiente, actividades)); // Corregido: actividades
+                inscripcion.add(new Inscripciones(siguiente, actividades)); 
                 System.out.println("  SISTEMA: " + siguiente.getNombre() + " cambio de la lista de espera al cupo cedido.");
             }
         }
@@ -224,7 +224,7 @@ public class Final {
     public static void main(String[] args) {
         gestioncupos sistema = new gestioncupos();
 
-        // Corregido: Se añadieron IDs al constructor
+       
         Estudiante sebastian = new Estudiante("sebastian", 5.0, 101);
         Estudiante stiven = new Estudiante("stiven", 3.5, 102);
         Estudiante camila = new Estudiante("camila", 4.0, 103);
